@@ -7,11 +7,13 @@ from requests.adapters import HTTPAdapter
 from urllib3.poolmanager import PoolManager
 from urllib3.util import ssl_
 
+import os
+
 # -----------------------------------------------------------------------------
 # 설정 / Configuration
 # -----------------------------------------------------------------------------
-TELEGRAM_BOT_TOKEN = '8768200515:AAFfCvsejDrc6yL1jXhXVfCC8xtNhB7Bwz8'
-TELEGRAM_CHAT_ID = '8763479451'
+TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
+TELEGRAM_CHAT_ID = os.environ.get('TELEGRAM_CHAT_ID')
 
 API_URL = "https://www.shingu.ac.kr/ajaxf/FR_BST_SVC/BistroCarteInfo.do"
 MENU_ID = "1630"
